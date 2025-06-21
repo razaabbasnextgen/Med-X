@@ -1,0 +1,2 @@
+$url = "https://v0.dev/chat/b/b_CuOP4Z0HbgY?token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..-Vi_BvVx0qF08s3x.xAnJXXqDWKyoqS47YQABIJv__mgWbcd0DzdGg2DSV9w8sgegAFcy-xgQBbE._bKrIQ5cPb5q5zzr6Wc-gw"
+npx shadcn@latest add $url --yes 

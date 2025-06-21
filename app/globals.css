@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 28% 95%;
+    --secondary-foreground: 224 71.4% 4.1%;
+    --muted: 215 28% 95%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 173 95% 46%; /* Electric Teal/Cyan */
+    --accent-foreground: 224 71.4% 4.1%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 20% 90%;
+    --input: 215 20% 90%;
+    --ring: 173 95% 46%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%; /* Near black */
+    --foreground: 215 20% 65%;
+    --card: 220 40% 7%; /* Darker card */
+    --card-foreground: 210 20% 98%;
+    --popover: 224 71% 4%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 215 28% 15%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 215 28% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 173 95% 46%; /* Electric Teal/Cyan */
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 215 28% 11%;
+    --input: 215 28% 11%;
+    --ring: 173 95% 46%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-image: radial-gradient(hsl(var(--foreground) / 0.05) 1px, transparent 1px);
+    background-size: 16px 16px;
+  }
+  .accent-glow {
+    @apply shadow-[0_0_15px_hsl(var(--accent)/0.4),0_0_30px_hsl(var(--accent)/0.2)];
+  }
+  
+  @keyframes glow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.8; }
+  }
+  
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+  
+  .font-heading {
+    font-family: Inter, system-ui, sans-serif;
+    font-weight: 700;
+  }
+}
